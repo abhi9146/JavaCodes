@@ -1,0 +1,51 @@
+
+** Class?
+     It is a user defined datatype.
+     class is a blueprint or template which includes data variables and data members.
+     class does not occupy space.
+
+    eg. suppose an engineer have to build a appartment then he will not directly start the construction instead he will first create a plan that where should be the kitchen ,batjrooms , bedrooms and after that he will start constructions  so here that plan is called as class.
+    
+
+** Object ?
+    Object is an instance of an class.
+    variables and functions of class cannot be accessed directly , we need to create object and through it we access those.
+    when the objects are created they consume space and they have characteristics behaviour.
+
+    eg . Animal is a class and its objects are cat , dog etc.
+
+** Features of oops
+     1) Inheritance 2) abstraction 3) Encapsulation 4) polymorphism
+
+ * Encapsulation :
+        Encapsulation is the process of binding together members functions and member variables as a single unit.
+        It is used for data hiding.
+
+       eg. Consider the example of a BankAccount class. A bank account has a balance, and you don't want this balance to be accessed or modified directly by external entities. Inste	ad, you would provide methods to deposit money, withdraw money, and check the balance. This way, you ensure that the balance is always maintained correctly, and no one can set an invalid or inconsistent balance directly.
+
+
+ * Abstraction : abstraction is the feature in c++ which is used to hide the unncessary information.it only provides the necessary details.It is used to hide the underlying complexity of implementation.
+
+ eg.Lets take an example of person and car. the person knows that by pressing the accelator the speed of car increases and pressing the brakes the speed of car decreases but he didint know the actual working that how the speed reduces after pressing breakes 
+and another example is that most of the peoples like to play the online games and know how to play them but they didnt know anything about how the game is wrorking in background, so in abstraction we hide the complex implementaion of functions.
+
+
+ * Polymorphism :
+      The word polymorphism means having many forms which is the property in c++ through which a meassage can be displayed in more than one form.
+      Polymorphism is the process of providing multiple implementation to a method to perform operations on the basis of parameter type and sub type.
+
+ eg. A man can have differnet characteristics in different situations such as a man is employee in company , husband of someone or father of someone at a same time he is having three different characteristics this is polymorphism.
+
+   1) Compile-time polymorphism:
+         Compile time polymorphism, also known as static polymorphism or early binding is the type of polymorphism where the binding of the call to its code is done at the compile time. Method overloading or operator overloading are examples of compile-time polymorphism.
+
+   2) Run-time polymorphism:
+         Also known as dynamic polymorphism or late binding, runtime polymorphism is the type of polymorphism where the actual implementation of the function is determined during the runtime or execution. Method overriding is an example of this method.
+
+
+ * Inheritance :
+      Inheritance is the property in c++ in which one class inherits the properties of another class.The class which is derived is called parent or base and other is called child class.
+      the main purpose of inheritance is reusability of code.
+
+ eg. i have written a class animal with some functions and then i have to create more classes having some properties of the previous class but i have to write them in each class so if inheritance is used then i can inherit the functions writtem in animal class so code is reused .
+          Types : single , multiple , multilevel , heirarchical and hybrid.
