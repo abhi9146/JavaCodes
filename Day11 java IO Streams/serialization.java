@@ -14,8 +14,7 @@ class Student implements Serializable
     {
         
     }
-    public Student(int r,String n,float a,String d)
-    {
+    public Student(int r,String n,float a,String d){
         rollno=r;
         name=n;
         avg=a;
