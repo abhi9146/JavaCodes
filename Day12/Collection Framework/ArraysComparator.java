@@ -7,6 +7,7 @@ class MyComp implements Comparator<Integer>{
          return 0;
      }
 }
+
 public class ArraysComparator {
     public static void main(String[] args) {
         Integer a[]={3,2,10,12,4,2};

@@ -9,23 +9,21 @@ class myData{
 
 class thread1 extends Thread{
     myData d;
-    public thread1(myData d){
-        this.d=d;
+    thread1(myData d){
+         this.d=d;
     }
-    
     public void run(){
-        d.display("Hello World");
+        d.display("Hello world ");
     }
 }
 
 class thread2 extends Thread{
     myData d;
-    public thread2(myData d){
-        this.d=d;
+    thread2(myData d){
+         this.d=d;
     }
-    
     public void run(){
-        d.display("welcome");
+        d.display("Abhishek ");
     }
 }
 

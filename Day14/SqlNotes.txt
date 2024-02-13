@@ -1,0 +1,124 @@
+1) Open or Create a Database:
+      sqlite3 your_database_name.db
+
+      This command opens or creates a new SQLite database file named "your_database_name.db."
+
+2) Create Tables:
+
+       CREATE TABLE dept (
+           deptno INTEGER PRIMARY KEY NOT NULL UNIQUE,
+           dname TEXT
+       );
+
+       CREATE TABLE students (
+           roll INTEGER PRIMARY KEY,
+           name TEXT,
+           city TEXT,
+           deptno INTEGER,
+           FOREIGN KEY(deptno) REFERENCES dept(deptno)
+       );
+       These commands create the "dept" and "students" tables.
+
+3) Insert Data into Tables:
+
+       INSERT INTO dept VALUES (10, 'CSE');
+       INSERT INTO dept VALUES (20, 'ECE');
+       
+       INSERT INTO students VALUES (1, 'Ajay', 'Delhi', 10);
+       INSERT INTO students VALUES (2, 'Bob', 'New York', 20);
+       These commands insert data into the created tables.
+       
+4) Query Data:
+       
+       SELECT * FROM dept;
+       SELECT * FROM students;
+
+       These commands retrieve and display data from the tables.
+       
+5) Update Data:
+       
+       UPDATE dept SET dname='Mech' WHERE deptno=20;
+       UPDATE students SET city='Paris' WHERE roll=1;
+       
+       These commands update existing records in the tables.
+
+6) Delete Data:
+
+        DELETE FROM dept WHERE deptno=10;
+        DELETE FROM students WHERE roll=2;
+
+        These commands delete data from the tables.
+        
+7) Show Table Schema:
+        
+        PRAGMA table_info(dept);
+        PRAGMA table_info(students);
+
+        These commands show the schema (columns and their details) for the specified tables.
+        
+8) Enable Foreign Key Constraints:
+        
+        PRAGMA foreign_keys=ON;
+        
+        This command enables foreign key constraints and is used before inserting data into foreign key table.
+        
+9) Exit SQLite Shell:
+        
+        .quit
+
+        This command exits the SQLite shell.
+        
+
+
+10) Simple SELECT:
+        
+    * Retrieve all columns from the "students" table.
+    
+        SELECT * FROM students;
+        JOIN (Inner Join):
+11) JOIN 
+
+    * Retrieve student names and their department names.
+    
+        SELECT students.name, dept.dname
+        FROM students
+        INNER JOIN dept ON students.deptno = dept.deptno;
+        
+12) Left Join : 
+    * Retrieve all departments and students (if any) in each department.
+        
+        SELECT dept.dname, students.name
+        FROM dept
+        LEFT JOIN students ON dept.deptno = students.deptno;
+
+13) Subquery:
+        
+    * Retrieve the names of students in the department with the highest department number.
+       
+        SELECT name
+        FROM students
+        WHERE deptno = (SELECT MAX(deptno) FROM dept);
+
+14) ORDER BY:
+        
+    * Retrieve all students ordered by their roll numbers in descending order.
+    
+        SELECT * FROM students
+        ORDER BY roll DESC;
+        
+15) GROUP BY:
+        
+    * Count the number of students in each department.
+    
+        SELECT deptno, COUNT(*) as student_count
+        FROM students
+        GROUP BY deptno;
+        
+16) HAVING:
+        
+    * Retrieve departments with more than two students.
+        
+        SELECT deptno, COUNT(*) as student_count
+        FROM students
+        GROUP BY deptno
+        HAVING student_count > 2;

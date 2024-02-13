@@ -10,7 +10,6 @@ class Outer{
        i.show();
     }
 }
-
 public class localInnerClass{
      public static void main(String[] args) {
         Outer o=new Outer();

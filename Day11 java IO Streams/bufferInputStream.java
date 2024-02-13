@@ -6,12 +6,15 @@ public class bufferInputStream {
         FileInputStream fis = new FileInputStream("Source1.txt");
         BufferedReader bis = new BufferedReader(new InputStreamReader(fis));
 
+        System.out.print( bis.readLine());
+        System.out.print( bis.readLine());
         System.out.print((char) bis.read());
-        System.out.print((char) bis.read());
-        System.out.print((char) bis.read());
+
         bis.mark(10);
+
         System.out.print((char) bis.read());
         System.out.print((char) bis.read());
+
         bis.reset();
         System.out.print((char) bis.read());
         System.out.print((char) bis.read());

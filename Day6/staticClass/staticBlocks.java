@@ -1,6 +1,5 @@
 class My{
     static int x;
-
     static{
         x=20;
         System.out.println("Block 1");

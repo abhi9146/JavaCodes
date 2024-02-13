@@ -6,7 +6,6 @@ public class Arraydqueue {
         dq.offerLast(2);
         dq.offerLast(6);
         dq.offerLast(8);
-        
 
         dq.offerFirst(10);
         dq.addFirst(80);

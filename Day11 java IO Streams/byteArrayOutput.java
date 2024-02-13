@@ -3,7 +3,7 @@ import java.io.*;
 
 public class byteArrayOutput {
     public static void main(String[] args) throws Exception {
-        ByteArrayOutputStream out= new ByteArrayOutputStream(20);
+        ByteArrayOutputStream out= new ByteArrayOutputStream();
 
         out.write('a');
         out.write('b');

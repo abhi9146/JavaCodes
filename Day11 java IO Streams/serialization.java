@@ -8,53 +8,45 @@ class Student implements Serializable
     private float avg;
     private String dept;
     public static int Data=10;
-    public transient int t;
     
-    public Student()
-    {
-        
-    }
     public Student(int r,String n,float a,String d){
         rollno=r;
         name=n;
         avg=a;
         dept=d;
         Data=500;
-        t=500;
     }
     
-    public String toString()
-    {
+    public String toString(){
         return "\nStudent Details\n"+
                 "\nRoll "+rollno+
                 "\nName "+name+
                 "\nAverage "+avg+
                 "\nDept "+dept+
-                "\nData "+Data+
-                "\nTransient "+t+"\n";
+                "\nData "+Data+"\n";
     }
     
 }
 
 public class serialization 
 {
-   /* public static void main(String[] args) throws Exception
-    {
-        FileOutputStream fos=new FileOutputStream("C:\\MyJava\\Student3.txt");
-        ObjectOutputStream oos=new ObjectOutputStream(fos);
+    // public static void main(String[] args) throws Exception
+    // {
+    //     FileOutputStream fos=new FileOutputStream("Student3.txt");
+    //     ObjectOutputStream oos=new ObjectOutputStream(fos);
         
-        Student s=new Student(10,"John",89.9f,"CSE");
+    //     Student s=new Student(10,"John",89.9f,"CSE");
         
-        oos.writeObject(s);
+    //     oos.writeObject(s);
         
-        fos.close();
-        oos.close();
+    //     fos.close();
+    //     oos.close();
         
-    }
-    */
+    // }
+    
     public static void main(String[] args) throws Exception
     {
-        FileInputStream fis=new FileInputStream("Source2.txt");
+        FileInputStream fis=new FileInputStream("Student3.txt");
         ObjectInputStream ois=new ObjectInputStream(fis);
         
         Student s=(Student)ois.readObject();
