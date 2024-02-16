@@ -12,7 +12,12 @@ public class ArraysComparator {
     public static void main(String[] args) {
         Integer a[]={3,2,10,12,4,2};
         int b[]={3,2};
+        
+        ArrayList<Integer> arr=new ArrayList<>();
+        arr.add(10);arr.add(3);arr.add(34);arr.add(6);
 
+        Collections.sort(arr);
+        System.out.println(arr);
         // int c[]=Arrays.copyOf(a,5);
         
         // for(var it:c)

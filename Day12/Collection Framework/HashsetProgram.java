@@ -13,8 +13,10 @@ public class HashsetProgram {
         h.add(90);
 
         System.out.println(h.size());
-        h.clear();
-        System.out.println(h);
+        //h.clear();
+        h.forEach((a)->System.out.println(a));
+
+        //System.out.println(h);
 
     }
 }

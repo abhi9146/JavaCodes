@@ -10,19 +10,19 @@ public class bufferInputStream {
         System.out.print( bis.readLine());
         System.out.print((char) bis.read());
 
-        bis.mark(10);
+       // bis.mark(10);
 
         System.out.print((char) bis.read());
         System.out.print((char) bis.read());
 
-        bis.reset();
+       // bis.reset();
         System.out.print((char) bis.read());
         System.out.print((char) bis.read());
 
         // Read the rest of the line using readLine()
         String restOfTheLine = bis.readLine();
         if (restOfTheLine != null) {
-            System.out.println("String " + restOfTheLine);
+            System.out.println(" " + restOfTheLine);
         }
 
         // Close the BufferedReader and FileInputStream
